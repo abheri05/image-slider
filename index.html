@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Slider</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .thumb img {
+    opacity: 0.4;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+  }
+
+  .thumb.active img {
+    opacity: 1;
+    border-color: red;
+    transform: scale(1.05);
+  }
+</style>
+
+</head>
+<body class="bg-black text-white">
+  <header>
+    <nav class="h-[50px] flex items-center gap-8 font-medium text-xl mt-2 justify-center z-50 relative ">
+      <a href="#" class="py-[9px] px-[25px] transition duration-200  hover:bg-red-700/60 hover:rounded-[3px] opacity:60">Home</a>
+      <a href="#" class="py-[9px] px-[25px] transition duration-200  hover:bg-red-700/60 hover:rounded-[3px]">About</a>
+      <a href="#" class="py-[9px] px-[25px] transition duration-200  hover:bg-red-700/60 hover:rounded-[3px]">Portfolio</a>
+      <a href="#" class="py-[9px] px-[25px] transition duration-200  hover:bg-red-700/60 hover:rounded-[3px]">Services</a>
+      <a href="#" class="py-[9px] px-[25px] transition duration-200  hover:bg-red-700/60 hover:rounded-[3px]">Contact</a>
+    </nav>
+  </header>
+
+  <section id="slider" class="w-screen h-screen overflow-hidden -mt-[60px] relative">
+    <div class="list relative">
+      <!-- Slide 1 -->
+      <div class="item absolute inset-0 w-screen h-screen">
+        <img src="/images/image1.jpg" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="absolute top-[22%] left-[10%]">
+          <div class="text-7xl font-bold mb-3">IMAGE SLIDER</div>
+          <div class="text-6xl text-red-600 mb-3 font-bold">ANIME</div>
+          <div class="text-lg w-[670px] mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta perferendis nulla culpa non nihil esse accusamus delectus cum suscipit repellat.</div>
+          <div class="w-[120px] bg-red-700 px-[25px] py-[10px] rounded-[2px] font-medium hover:bg-white hover:text-red-700 cursor-pointer">
+            See More
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="item absolute inset-0 w-screen h-screen">
+        <img src="/images/image3.jpg" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="absolute top-[22%] left-[10%]">
+          <div class="text-7xl font-bold mb-3">IMAGE SLIDER</div>
+          <div class="text-6xl text-red-600 mb-3 font-bold">ANIME</div>
+          <div class="text-lg w-[670px] mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta perferendis nulla culpa non nihil esse accusamus delectus cum suscipit repellat.</div>
+          <div class="w-[120px] bg-red-700 px-[25px] py-[10px] rounded-[2px] font-medium hover:bg-white hover:text-red-700 cursor-pointer">
+            See More
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="item absolute inset-0 w-screen h-screen">
+        <img src="/images/image4.jpg" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="absolute top-[22%] left-[10%]">
+          <div class="text-7xl font-bold mb-3">IMAGE SLIDER</div>
+          <div class="text-6xl text-red-600 mb-3 font-bold">ANIME</div>
+          <div class="text-lg w-[670px] mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta perferendis nulla culpa non nihil esse accusamus delectus cum suscipit repellat.</div>
+          <div class="w-[120px] bg-red-700 px-[25px] py-[10px] rounded-[2px] font-medium hover:bg-white hover:text-red-700 cursor-pointer">
+            See More
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="item absolute inset-0 w-screen h-screen">
+        <img src="/images/image5.jpg" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="absolute top-[22%] left-[10%]">
+          <div class="text-7xl font-bold mb-3">IMAGE SLIDER</div>
+          <div class="text-6xl text-red-600 mb-3 font-bold">ANIME</div>
+          <div class="text-lg w-[670px] mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta perferendis nulla culpa non nihil esse accusamus delectus cum suscipit repellat.</div>
+          <div class="w-[120px] bg-red-700 px-[25px] py-[10px] rounded-[2px] font-medium hover:bg-white hover:text-red-700 cursor-pointer">
+            See More
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Thumbnail -->
+<div class="thumbnails absolute bottom-[30px] right-[40px] flex gap-[30px] z-[100]">
+  <!-- <div class="thumb w-[160px] h-[220px] relative">
+    <img src="/images/image1.jpg" alt="" class="w-full h-full object-cover rounded-[10px]" />
+  </div> -->
+  <div class="thumb w-[160px] h-[220px] relative">
+    <img src="/images/image1.jpg" alt="" class="w-full h-full object-cover rounded-[10px]" />
+  </div>
+  <div class="thumb w-[160px] h-[220px] relative">
+    <img src="/images/image3.jpg" alt="" class="w-full h-full object-cover rounded-[10px]" />
+  </div>
+  <div class="thumb w-[160px] h-[220px] relative">
+    <img src="/images/image4.jpg" alt="" class="w-full h-full object-cover rounded-[10px]" />
+  </div>
+  <div class="thumb w-[160px] h-[220px] relative">
+    <img src="/images/image5.jpg" alt="" class="w-full h-full object-cover rounded-[10px]" />
+  </div>
+</div>
+
+
+
+    <!-- Arrow Buttons -->
+    <div class="absolute top-[80%] right-[70%] z-[100] flex gap-[20px] items-center">
+      <div id="prev" class="w-[50px] h-[50px] rounded-full bg-red-700 text-3xl text-center font-bold py-1 cursor-pointer"> < </div>
+      <div id="next" class="w-[50px] h-[50px] rounded-full bg-red-700 text-3xl text-center font-bold py-1 cursor-pointer"> > </div>
+    </div>
+  </section>
+
+  <script src="/slider.js"></script>
+</body>
+</html>
